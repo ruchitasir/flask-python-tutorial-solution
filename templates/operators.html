@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h1>Operators</h1>
+  <h2>Operators List</h2>
+  {% for op in operators %}
+    <div>
+      <h3>{{ op.name }}: {{ op.symbol }}</h3>
+      <p>{{ op.description }}</p>
+      <h4>Example Code</h4>
+      <pre>
+        {{ op.example }}
+      </pre>
+      <p>{{ op.uses }}</p>
+    </div>
+  {% endfor %}
+  <hr>
+  <h2>Adding a new operator</h2>
+  <form action="/operators" method="POST">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" name="name">
+    </div>
+    <div>
+      <label for="description">description:</label>
+      <input id="description" name="description">
+    </div>
+    <div>
+      <label for="symbol">symbol:</label>
+      <input id="symbol" name="symbol">
+    </div>
+    <div>
+      <label for="example">example:</label>
+      <textarea id="example" name="example"></textarea>
+    </div>
+    <div>
+      <label for="uses">uses:</label>
+      <input id="uses" name="uses">
+    </div>
+    <input type="submit">
+  </form>
+{% endblock %}

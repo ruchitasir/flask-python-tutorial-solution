@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Python Tutorial</title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          {% if page == 'home' %}
+            <a href="/" class="current">Home</a>
+          {% else %}
+            <a href="/">Home</a>
+          {% endif %}
+        </li>
+        <li>
+            {% if page == 'operators' %}
+              <a href="/operators" class="current">Operators</a>
+            {% else %}
+              <a href="/operators">Operators</a>
+            {% endif %}
+        </li>
+        <li>
+            {% if page == 'loops' %}
+              <a href="/loops" class="current">Loops</a>
+            {% else %}
+              <a href="/loops">Loops</a>
+            {% endif %}
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <footer>Footer</footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  font-size: 24px;
+}
+
+a {
+  text-decoration: none;
+  color: hotpink;
+}
+
+a:hover {
+  color: chartreuse;
+}
+
+footer {
+  color: white;
+  background-color: #333;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+}
+
+pre {
+  background-color: #eee;
+  padding: 15px 35px 0 0;
+  display: inline-block;
+}
+
+.small {
+  max-height: 200px;
+  width: auto;
+}
+
+.current {
+  background-color: aqua;
+}
